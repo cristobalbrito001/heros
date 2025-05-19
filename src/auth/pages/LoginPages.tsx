@@ -6,8 +6,9 @@ const LoginPages = () => {
     const{ login }= useContext(AuthContext);
     const navigate = useNavigate();
     const HandleLogin = () =>{
+        const lastPath = localStorage.getItem('lastPath') || '/';
         login('Cris brito')
-        navigate('/',{replace: true});
+        navigate(lastPath,{replace: true});
     }
     return(
         <>
